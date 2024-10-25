@@ -1,0 +1,103 @@
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+
+// Register Page
+export default function Register() {
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    password: ""
+  });
+  const navigate = useNavigate();
+
+  const handleChange = (event) => {
+    setValues({ ...values, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    axios
+      .post("http://localhost:8081/register", values)
+      .then((res) => clearup(res))
+      .catch((err) => console.log(err));
+  };
+
+  function clearup(das) {
+    if (das.data.status === "Successfully Registered") {
+      navigate("/login");
+    } else {
+      alert(das.data.Error);
+    }
+  }
+
+  return (
+    <div className="flex justify-center items-center h-screen bg-gray-100">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white p-6 rounded shadow-md w-full max-w-sm"
+      >
+        <h2 className="text-center text-2xl font-bold text-gray-700 mb-6"> Register to EmpowerHer </h2>
+        
+        <div className="mb-4">
+          <label className="block text-gray-700 font-semibold" htmlFor="name">
+            Name <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="text"
+            value={values.name}
+            onChange={handleChange}
+            id="name"
+            name="name"
+            className="mt-1 p-2 w-full border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        
+        <div className="mb-4">
+          <label className="block text-gray-700 font-semibold" htmlFor="email">
+            Email <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="email"
+            value={values.email}
+            onChange={handleChange}
+            id="email"
+            name="email"
+            className="mt-1 p-2 w-full border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        
+        <div className="mb-4">
+          <label className="block text-gray-700 font-semibold" htmlFor="password">
+            Password <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="password"
+            value={values.password}
+            onChange={handleChange}
+            id="password"
+            name="password"
+            className="mt-1 p-2 w-full border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        
+        <button
+          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200"
+          type="submit"
+        >
+          Sign Up
+        </button>
+        
+        <p className="text-center text-gray-600 mt-4">
+          Already have an account? <Link to="/login" className="text-blue-500">Sign in</Link>
+        </p>
+      </form>
+    </div>
+  );
+}

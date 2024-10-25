@@ -5,6 +5,9 @@ import { AboutUs } from './Pages/AboutUsi';
 import CourseView from './Pages/CourseView';
 import Services from './comps/Servies';
 import { ServicePage } from './Pages/ServicesPage';
+import Register from './comps/Register';
+import Login from './comps/Login';
+
 
 
 
@@ -15,9 +18,12 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage   />} />
         <Route path="/home" element={<LandingPage   />} />
+        
         <Route path="/about" element={<AboutUs   />} />
         <Route path="/course" element={<CourseView   />} />
         <Route path="/services" element={<ServicePage  />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );

@@ -29,6 +29,9 @@ const NavBar = () => {
               <Link to="/course" className="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">course</Link>
               <Link to="/mentorship" className="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">mentorship</Link>
               <Link to="/about" className="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">about</Link>
+              <Link to="/register" className="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Register</Link>
+              <Link to="/login" className="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Login</Link>
+              
             </div>
           </div>
           <div className="md:hidden">
@@ -48,6 +51,10 @@ const NavBar = () => {
             <Link to="/course" className="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">course</Link>
             <Link to="/mentorship" className="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">mentorship</Link>
             <Link to="/about" className="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">about</Link>
+            <Link to="/register" className="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Register</Link>
+            <Link to="/login" className="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Login</Link>
+            
+      
           </div>
         </div>
       )}
