@@ -6,6 +6,8 @@ import {
 } from 'react-icons/fi';
 import {HomeDash} from './HomeDash';
 import { useTheme } from '../App';
+import Courses from './Courses';
+import Mentors from './Mentors';
 
 const DashboardLayout = () => {
   const { setIsAdmin } = useTheme();
@@ -21,16 +23,16 @@ const DashboardLayout = () => {
   const userNavigation = [
     { name: 'Dashboard', href: '#', icon: FiHome, id: 'dashboard' },
     { name: 'Course', href: '#', icon: FiShoppingCart, id: 'Course' },
-    { name: 'Mentorship', href: '#', icon: FiMapPin, id: 'Mentorship' },
+    { name: 'Mentorship', href: '#', icon: FiMapPin, id: 'Mentors' },
     { name: 'Grade', href: '#', icon: FiPackage, id: 'grade' },
     { name: 'Progress', href: '#', icon: FiPackage, id: 'progress' },
   ];
 
-  const mentorshipNavigation = [
+  const mentorsNavigation = [
     { name: 'Dashboard', href: '#', icon: FiHome, id: 'dashboard' },
     { name: 'Mentor', href: '#', icon: FiPackage, id: 'mentor' },
     { name: 'Student', href: '#', icon: FiUsers, id: 'Student' },
-    { name: 'Scheledule', href: '#', icon: FiDollarSign, id: 'Mentorship' },
+    { name: 'Scheledule', href: '#', icon: FiDollarSign, id: 'Mentors' },
     { name: 'Calendar', href: '#', icon: FiPieChart, id: 'Calendar' },
     { name: 'Progress', href: '#', icon: FiLayers, id: 'Progress' },
   ];
@@ -48,7 +50,7 @@ const DashboardLayout = () => {
   const navigation = currentRole === "admin"
     ? adminNavigation
     : currentRole === "mentor"
-    ? mentorshipNavigation
+    ? mentorsNavigation
     : userNavigation;
 
   const handleRoleChange = (newRole) => {
@@ -173,7 +175,8 @@ const DashboardLayout = () => {
         {/* Page Content */}
         <main className="p-6">
           {activeLink === "dashboard" && <HomeDash isAdmin={currentRole === 'admin'} />}
-          {activeLink === "orders" && "Orders"}
+          {activeLink === "Course" && <Courses />}
+          {activeLink === "Mentors" && <Mentors />}
           {/* Additional content based on activeLink */}
         </main>
       </div>

@@ -8,7 +8,7 @@ const Hero = (props) => {
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                 <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center">{props.title ? props.title : "Your Voice, Our Future"}</h1>
                 <p className="text-xl md:text-2xl mb-8 text-center">{props.text ? props.text : "We empower young women in Rwanda with tech, education, and mentorship, building a future of equal opportunities for all girls to lead and succeed"}</p>
-                <button className="bg-blue-600 hover:bg-blue-700 text-white text-xl py-5 px-5 rounded">
+                <button onClick={()=>window.location.href="/login"} className="bg-blue-600 hover:bg-blue-700 text-white text-xl py-5 px-5 rounded">
                     {props.button ? props.button : "Join Us"}
                 </button>
             </div>

@@ -142,7 +142,7 @@ const Courses = () => {
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <h1 className="text-2xl font-bold text-blue-500">Course Management</h1>
+            <h1 className="text-2xl font-bold text-blue-500">Course Dashboard</h1>
             <div className="flex items-center gap-4">
               <div className="relative flex-1 md:w-64">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />

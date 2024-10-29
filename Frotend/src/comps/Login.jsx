@@ -33,8 +33,9 @@ export default function Login() {
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
-      <form
+      <div
         onSubmit={handleSubmit}
+        action="/dashboard"
         className="bg-white p-6 rounded shadow-md w-full max-w-sm"
       >
         <h2 className="text-center text-2xl font-bold text-gray-700 mb-6">Login to EmpowerHer</h2>
@@ -72,8 +73,8 @@ export default function Login() {
         </div>
         
         <button
+        onClick={()=>window.location.href="/dashboard"}
           className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200"
-          type="submit"
         >
           Sign in
         </button>
@@ -81,7 +82,7 @@ export default function Login() {
         <p className="text-center text-gray-600 mt-4">
           Don't have an account? <Link to="/register" className="text-blue-500">Sign Up</Link>
         </p>
-      </form>
+      </div>
     </div>
   );
 }
