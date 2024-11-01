@@ -27,13 +27,13 @@ export const HomeDash = ({ isAdmin }) => {
             <div className="grid grid-cols-1 gap-6 mb-6 lg:grid-cols-4">
                 <StatCard
                     icon={FiPackage}
-                    title="Total Purchase"
+                    title="Total activities"
                     value="142"
                     trend={'20.1'}
                 />
                 <StatCard
                     icon={FiShoppingCart}
-                    title="My Cart"
+                    title="My portal"
                     value="89"
                     trend={10}
                 />
