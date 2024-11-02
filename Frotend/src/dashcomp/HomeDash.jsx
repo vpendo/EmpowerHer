@@ -69,13 +69,13 @@ export const HomeDash = ({ isAdmin }) => {
                                 <th className="text-left py-3 px-4 ">Avatar</th>
                                 <th className="text-left py-3 px-4 ">ID</th>
                                 <th className="text-left py-3 px-4 ">
-                                    Product
+                                    Course
                                 </th>
                                 <th className="text-left py-3 px-4 ">
-                                    Order Date
+                                    start Date
                                 </th>
                                 <th className="text-left py-3 px-4 ">Status</th>
-                                <th className="text-left py-3 px-4 ">Amount</th>
+                                <th className="text-left py-3 px-4 ">Total</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -86,7 +86,7 @@ export const HomeDash = ({ isAdmin }) => {
                                             <img src={userInfo?.UserInfo?.avatar} alt="" srcset="" className='h-full w-full object-cover' />
                                         </div>
                                     </td>
-                                    <td className="py-3 px-4 ">#{item}001</td>
+                                    <td className="py-3 px-4 ">#{item}</td>
                                     <td className="py-3 px-4 ">
                                         {`Product ${item}`}
                                     </td>

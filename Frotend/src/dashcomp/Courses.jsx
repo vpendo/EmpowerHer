@@ -20,7 +20,7 @@ const Courses = () => {
       rating: 4.8,
       enrolled: 1250,
       price: 99.99,
-      image: "/api/placeholder/400/250",
+      image: "https://download.logo.wine/logo/React_(web_framework)/React_(web_framework)-Logo.wine.png",
       lectures: [
         "Modern React Fundamentals",
         "Hooks Deep Dive",
@@ -55,7 +55,7 @@ const Courses = () => {
       rating: 4.7,
       enrolled: 2100,
       price: 89.99,
-      image: "/api/placeholder/400/250",
+      image: "https://www.svgrepo.com/show/376344/python.svg",
       lectures: [
         "Python Fundamentals",
         "NumPy and Pandas",
@@ -78,39 +78,41 @@ const Courses = () => {
       ]
     },
     {
-      id: 3,
-      title: "UI/UX Design Principles",
-      description: "Learn modern design principles and create stunning user interfaces and experiences.",
-      date: "2024-09-20",
-      instructor: "Emma Wilson",
-      duration: "8 weeks",
-      level: "Beginner",
-      rating: 4.9,
-      enrolled: 1800,
-      price: 79.99,
-      image: "/api/placeholder/400/250",
-      lectures: [
-        "Design Fundamentals",
-        "User Research",
-        "Wireframing",
-        "Prototyping"
-      ],
-      requirements: [
-        "No prior experience needed",
-        "Basic computer skills"
-      ],
-      outcomes: [
-        "Create user-centered designs",
-        "Build interactive prototypes",
-        "Conduct user research"
-      ],
-      materials: [
-        "Design templates",
-        "Case studies",
-        "Resource library"
-      ]
-    }
-  ];
+    id: 3, 
+    title: "Introduction to Robotics",
+    description: "Explore the fundamentals of robotics, including robot design, programming, and control systems. Gain hands-on experience with building and programming robots.",
+    date: "2024-11-15",
+    instructor: "Alice Green",
+    duration: "10 weeks",
+    level: "Intermediate",
+    rating: 4.6,
+    enrolled: 950,
+    price: 89.99,
+    image: "https://up-board.org/wp-content/uploads/2022/08/03_UP-Xtreme-i11-Robotic-Development-Kit-1024x1024.png",
+    lectures: [
+      "Basics of Robotics",
+      "Sensors and Actuators",
+      "Robot Programming",
+      "Control Systems"
+    ],
+    requirements: [
+      "Basic programming skills",
+      "Understanding of electronics"
+    ],
+    outcomes: [
+      "Build and program basic robots",
+      "Understand robotics applications",
+      "Work with sensors and actuators"
+    ],
+    materials: [
+      "Robotics kits",
+      "Video tutorials",
+      "Project documentation"
+    ]
+  }
+];
+
+ 
 
   const [courses, setCourses] = useState(initialCourses);
 

@@ -8,6 +8,15 @@ import {HomeDash} from './HomeDash';
 import { useTheme } from '../App';
 import Courses from './Courses';
 import Mentors from './Mentors';
+import Studentlist from './Studentlist';
+import ScheduleList from './Schedulelist';
+import CalendarList from './Calendarlist';
+import GradeList from './Gradelist';
+import ProgressList from './Progresslist';
+import UserTable from './UserTable';
+import MentorTable from './MentorTable';
+import AdminCheckTable from './AdminCheckTable';
+
 
 const DashboardLayout = () => {
   const { setIsAdmin } = useTheme();
@@ -30,9 +39,9 @@ const DashboardLayout = () => {
 
   const mentorsNavigation = [
     { name: 'Dashboard', href: '#', icon: FiHome, id: 'dashboard' },
-    { name: 'Mentor', href: '#', icon: FiPackage, id: 'mentor' },
+    { name: 'Mentor', href: '#', icon: FiPackage, id: 'Mentors' },
     { name: 'Student', href: '#', icon: FiUsers, id: 'Student' },
-    { name: 'Scheledule', href: '#', icon: FiDollarSign, id: 'Mentors' },
+    { name: 'Scheledule', href: '#', icon: FiDollarSign, id: 'Scheledule' },
     { name: 'Calendar', href: '#', icon: FiPieChart, id: 'Calendar' },
     { name: 'Progress', href: '#', icon: FiLayers, id: 'Progress' },
   ];
@@ -177,6 +186,16 @@ const DashboardLayout = () => {
           {activeLink === "dashboard" && <HomeDash isAdmin={currentRole === 'admin'} />}
           {activeLink === "Course" && <Courses />}
           {activeLink === "Mentors" && <Mentors />}
+          {activeLink === "Student" && <Studentlist/>}
+          {activeLink === "Scheledule" && <ScheduleList/>}
+          {activeLink === "Calendar" && <CalendarList/>}
+          {activeLink === "grade" && <GradeList/>}
+          {activeLink === "Progress" && <ProgressList/>}
+          {activeLink === "User" && <UserTable/>}
+          {activeLink === "Mentor" && <MentorTable/>}
+          {activeLink === "Checking" && <AdminCheckTable/>}          
+          
+          
           {/* Additional content based on activeLink */}
         </main>
       </div>
